@@ -14,10 +14,10 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-        <ol key={"relativesList"}>
+        <ol key={"relativeList"}>
           {this.realtives &&
             this.realtives.map((item, index) => (
-              <li key={`relativesListItem${index + 1}`}>{item.name}</li>
+              <li key={`relativeListItem${index + 1}`}>{item.name}</li>
             ))}
         </ol>
       </div>
