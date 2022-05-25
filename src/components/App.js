@@ -15,9 +15,10 @@ class App extends Component {
     return (
       <div id="main">
         <ol key={"relativesList"}>
-          {this.realtives.map((item, index) => {
-            <li key={`relativesListItem{index+1}`}>{item.name}</li>;
-          })}
+          {this.realtives &&
+            this.realtives.map((item, index) => {
+              <li key={`relativesListItem${index + 1}`}>{item.name}</li>;
+            })}
         </ol>
       </div>
     );
