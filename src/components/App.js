@@ -1,16 +1,27 @@
-import React, {Component, useState} from "react";
-import '../styles/App.css';
+import React, { Component, useState } from "react";
+import "../styles/App.css";
 
 class App extends Component {
-    render() {
-
-        return(
-            <div id="main">
-               {/* Do not remove the main div */}
-            </div>
-        )
-    }
+  constructor(props) {
+    super(props);
+    this.realtives = [
+      { name: "himad" },
+      { name: "ameen" },
+      { name: "subradhip" },
+      { name: "nath" }
+    ];
+  }
+  render() {
+    return (
+      <div id="main">
+        <ol key={"relativesList"}>
+          {this.realtives.map((item, index) => {
+            <li key={`relativesListItem{index+1}`}>{item.name}</li>;
+          })}
+        </ol>
+      </div>
+    );
+  }
 }
-
 
 export default App;
